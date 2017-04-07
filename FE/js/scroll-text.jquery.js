@@ -62,7 +62,7 @@
 
     ScrollTextItem.prototype.slide = function(height) {
         var that = this,
-            transform = 'translateY(' + (-1 * height) + 'px)';
+            transform = 'translate3d(0, ' + (-1 * height) + 'px, 0)';
 
         this.$slider
             .removeClass('animate')
@@ -75,7 +75,7 @@
             });
 
         setTimeout(function() {
-            transform = 'translateY(' + 0 + ')';
+            transform = 'translate3d(0, 0, 0)';
 
             that.$slider
                 .addClass('animate')
